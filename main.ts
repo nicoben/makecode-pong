@@ -97,7 +97,11 @@ function create_ball () {
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Projectile)
     ball.setFlag(SpriteFlag.BounceOnWall, true)
-    ball.setVelocity(50, 50)
+    if (Math.randomRange(0, 1) == 0) {
+        ball.setVelocity(50, 50)
+    } else {
+        ball.setVelocity(-50, 50)
+    }
 }
 let ball: Sprite = null
 let left_paddle: Sprite = null
